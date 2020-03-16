@@ -22,7 +22,7 @@ rclone:
   # additional arguments for customising rclone
   # mount options can be found here - https://rclone.org/commands/rclone_mount/#options
   additionalArgs:
-    - --buffer-size 128M
+          #    - --buffer-size 128M #Invalid Flag?!
     - --attr-timeout 1000h
     - --dir-cache-time 72h
     - --drive-chunk-size 32M
