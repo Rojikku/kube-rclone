@@ -22,15 +22,22 @@ rclone:
   # additional arguments for customising rclone
   # mount options can be found here - https://rclone.org/commands/rclone_mount/#options
   additionalArgs:
-    - --allow-other
-    - --allow-non-empty
-    - --attr-timeout 1000h
     - --buffer-size 128M
+    - --attr-timeout 1000h
+    - --dir-cache-time 72h
+    - --drive-chunk-size 32M
+    - --fast-list
+    - --umask 002
+    - --vfs-read-chunk-size 128M
+    - --vfs-read-chunk-size-limit off
+    - --cache-workers=8
+    - --cache-writes
     - --dir-cache-time 2h
     - --drive-chunk-size 32M
     - --timeout 1h
-    - --umask 002
     - --poll-interval 15s
+    - --no-modtime
+    - --drive-use-trash
 
 
 resources: {}
